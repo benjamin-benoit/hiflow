@@ -1,30 +1,33 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import { RootNavigator } from "./src/routes/routes";
+import * as Font from "expo-font";
+import AppLoading from "expo-app-loading";
 
-const App = () => (
-  <View style={styles.container}>
-    <Text style={styles.title}>React Native</Text>
-  </View>
-);
+const fetchFonts = () => {
+  return Font.loadAsync({
+    "MerriweatherSans-Bold": require("./src/assets/fonts/MerriweatherSans-Bold.ttf"),
+    "MerriweatherSans-Medium": require("./src/assets/fonts/MerriweatherSans-Medium.ttf"),
+  });
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 24,
-    backgroundColor: "#eaeaea",
-  },
-  title: {
-    marginTop: 16,
-    paddingVertical: 8,
-    borderWidth: 4,
-    borderColor: "#20232a",
-    borderRadius: 6,
-    backgroundColor: "#61dafb",
-    color: "#20232a",
-    textAlign: "center",
-    fontSize: 30,
-    fontWeight: "bold",
-  },
-});
+function App() {
+  const [fontLoaded, setFontLoaded] = useState(false);
+
+  if (!fontLoaded) {
+    return (
+      <AppLoading
+        startAsync={fetchFonts}
+        onFinish={() => setFontLoaded(true)}
+        onError={console.warn}
+      />
+    );
+  }
+
+  return (
+    <>
+      <RootNavigator />
+    </>
+  );
+}
 
 export default App;
