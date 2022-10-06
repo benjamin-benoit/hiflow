@@ -6,7 +6,7 @@ export default StyleSheet.create({
     width: '100%',
     fontSize: 13,
     textAlign: 'center',
-    backgroundColor: Theme.palette.background,
+    backgroundColor: Theme.palette.white,
   },
   menuElement: {
     fontFamily: 'MerriweatherSans-Medium',

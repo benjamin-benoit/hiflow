@@ -2,9 +2,11 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AccountHome from "../screens/Account/AccountHome";
 import { View, Text } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import { styles } from "./layout";
+import AccountInformations from "../screens/Account/AccountInformations";
+import Theme from "../common/themes";
 
 const LogoTitle = (children) => {
   return (
@@ -12,6 +14,15 @@ const LogoTitle = (children) => {
       <Text style={styles.headerTitle}>{children.children}</Text>
     </View>
   );
+};
+
+const customTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: Theme.palette.white,
+    background: Theme.palette.background,
+  },
 };
 
 const Stack = createNativeStackNavigator();
@@ -30,11 +41,16 @@ const OPTIONS = {
 
 export const RootNavigator = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={customTheme}>
       <Stack.Navigator>
         <Stack.Screen
           name="Mon Compte"
           component={AccountHome}
+          options={OPTIONS}
+        />
+        <Stack.Screen
+          name="Mes Informations"
+          component={AccountInformations}
           options={OPTIONS}
         />
       </Stack.Navigator>

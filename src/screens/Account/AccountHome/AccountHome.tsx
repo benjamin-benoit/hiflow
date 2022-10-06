@@ -3,12 +3,12 @@ import { View, Image, Text } from "react-native";
 import HomeAccountMenu from "../../../common/components/HomeAccountMenu";
 import styles from "./layout";
 
-const AccountHome = () => {
+const AccountHome = ({ navigation }) => {
   const mainItems = [
     {
       id: 1,
       name: "Mes informations",
-      action: () => console.log("nav"),
+      action: () => navigation.navigate("Mes Informations"),
     },
     { id: 2, name: "Mes missions", action: () => console.log("nav") },
   ];
