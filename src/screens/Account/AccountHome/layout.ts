@@ -28,6 +28,6 @@ export default StyleSheet.create({
   userMail: {
     fontFamily: 'MerriweatherSans-Medium',
     fontSize: 12,
-    color: Theme.palette.greylight
+    color: Theme.palette.greydarker
   }
 });

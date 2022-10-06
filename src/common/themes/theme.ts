@@ -2,9 +2,11 @@ import colors from './colors';
 
 export const mainTheme = {
   palette: {
-    background: colors.WHITE,
+    white: colors.WHITE,
     grey: colors.GREY,
-    greylight: colors.GREYLIGHT
+    greydarker: colors.GREYDARKER,
+    background: colors.BACKGROUND,
+    blue: colors.BLUE,
   },
 } as const;
 

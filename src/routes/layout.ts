@@ -9,6 +9,6 @@ export const styles = StyleSheet.create({
   headerTitle: {
     fontFamily: 'MerriweatherSans-Bold',
     height: 25,
-    color: Theme.palette.background,
+    color: Theme.palette.white,
   },
 });
