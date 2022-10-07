@@ -7,6 +7,8 @@ export const mainTheme = {
     greydarker: colors.GREYDARKER,
     background: colors.BACKGROUND,
     blue: colors.BLUE,
+    bluelight: colors.BLUELIGHT,
+    bluelighter: colors.BLUELIGHTER,
   },
 } as const;
 
