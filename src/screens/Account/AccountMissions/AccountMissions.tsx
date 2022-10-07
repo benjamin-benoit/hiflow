@@ -6,7 +6,7 @@ import styles from "./layout";
 import MissionCard from "../../../common/components/MissionCard/MissionCard";
 import { Mission } from "../../../common/components/MissionCard/types";
 
-const AccountMissions = ({ navigation }) => {
+const AccountMissions = () => {
   const missionItems: Mission[] = [
     {
       id: "789078",

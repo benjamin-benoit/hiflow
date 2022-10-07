@@ -18,6 +18,7 @@ const AccountHome = ({ navigation }) => {
   ];
 
   return (
+    // Récupération des infos via l'API
     <>
       <View style={styles.profile}>
         <Image source={require("../../../assets/avatar.png")} />
