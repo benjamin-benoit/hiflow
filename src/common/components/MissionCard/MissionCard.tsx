@@ -12,6 +12,7 @@ const MissionCard = ({ mission }: Props) => {
   const { cityFrom, dateFrom, cityTo, dateTo } = mission.FromTo;
 
   return (
+    // Creation de sous composent pour avoir un code moins immense
     <View style={styles.container}>
       <View style={styles.mainData}>
         <FromTo

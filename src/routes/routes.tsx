@@ -41,6 +41,7 @@ const OPTIONS = {
 };
 
 export const RootNavigator = () => {
+  // Manque le splash screen (absent sur figma)
   return (
     <NavigationContainer theme={customTheme}>
       <Stack.Navigator>

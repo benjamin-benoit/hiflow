@@ -13,6 +13,7 @@ const AccountInformations = () => {
       <Formik
         initialValues={{ name: "", familyName: "", email: "" }}
         onSubmit={(values) => {
+          // Appel API pour modifier les informations de l'utilisateur et reset de cache
           console.log(values);
         }}
         validationSchema={InformationsSchema}
