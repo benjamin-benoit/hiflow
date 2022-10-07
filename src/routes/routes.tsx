@@ -6,6 +6,7 @@ import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import { styles } from "./layout";
 import AccountInformations from "../screens/Account/AccountInformations";
+import AccountMissions from "../screens/Account/AccountMissions";
 import Theme from "../common/themes";
 
 const LogoTitle = (children) => {
@@ -51,6 +52,11 @@ export const RootNavigator = () => {
         <Stack.Screen
           name="Mes Informations"
           component={AccountInformations}
+          options={OPTIONS}
+        />
+        <Stack.Screen
+          name="Mes Missions"
+          component={AccountMissions}
           options={OPTIONS}
         />
       </Stack.Navigator>

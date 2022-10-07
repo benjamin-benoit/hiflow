@@ -10,7 +10,11 @@ const AccountHome = ({ navigation }) => {
       name: "Mes informations",
       action: () => navigation.navigate("Mes Informations"),
     },
-    { id: 2, name: "Mes missions", action: () => console.log("nav") },
+    {
+      id: 2,
+      name: "Mes missions",
+      action: () => navigation.navigate("Mes Missions"),
+    },
   ];
 
   return (
